@@ -1,0 +1,136 @@
+:root {
+  --primary: #2563eb; /* azul mais forte */
+  --background: #f7f9fc;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+}
+
+p {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus {/* Estiliza o campo de input quando clicado */
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+button { /* Estiliza os botões */
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+button:hover { 
+  background-color: #1e40af;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.link-card { /* Estiliza os cartões de links */
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.link-card h4 {
+  margin: 0 0 0.5rem;
+  color: var(--text-main);
+}
+
+.link-card a {
+  color: var(--primary);
+  text-decoration: none;
+  word-break: break-all; /*PAra a estilização não quebrar em URLs longas */
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+.link-card p { /* Descrição do link */
+  text-align: left;
+  margin: 0.25rem 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.link-card button {/*Estilização do botão de copiar */
+  margin-top: 0.8rem;
+  background-color: #f3f4f6;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.link-card button:hover {
+  background-color: #e5e7eb;
+}
+
+/* Layout responsivo */
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%; /* Botões ocupam toda a largura no mobile */
+  }
+}
